@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>墨卷小说</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="墨卷小说首页">
+        <span class="brand-mark">墨</span>
+        <span>墨卷小说</span>
+      </a>
+      <nav class="main-nav" aria-label="主导航">
+        <a href="#library">书库</a>
+        <a href="#ranking">排行</a>
+        <a href="#reader">阅读</a>
+      </nav>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="切换夜间模式">◐</button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-media" aria-hidden="true">
+          <div class="book book-one"></div>
+          <div class="book book-two"></div>
+          <div class="book book-three"></div>
+        </div>
+        <div class="hero-copy">
+          <p class="eyebrow">今日推荐</p>
+          <h1>在下一章开始前，先找到今晚想读的故事。</h1>
+          <p>精选玄幻、科幻、悬疑、都市与轻小说。简洁书架、章节阅读、搜索筛选，一打开就能读。</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#library">进入书库</a>
+            <a class="ghost-button" href="#reader">继续阅读</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolbar" aria-label="筛选小说">
+        <label class="search-box">
+          <span>搜索</span>
+          <input id="searchInput" type="search" placeholder="输入书名、作者或简介关键词" />
+        </label>
+        <div class="category-tabs" id="categoryTabs" role="tablist" aria-label="小说分类"></div>
+      </section>
+
+      <section class="section-shell" id="library">
+        <div class="section-heading">
+          <p class="eyebrow">Library</p>
+          <h2>精选书库</h2>
+        </div>
+        <div class="novel-grid" id="novelGrid"></div>
+      </section>
+
+      <section class="split-section" id="ranking">
+        <div>
+          <p class="eyebrow">Ranking</p>
+          <h2>本周热读</h2>
+          <ol class="ranking-list" id="rankingList"></ol>
+        </div>
+        <aside class="notice-panel">
+          <p class="eyebrow">公告</p>
+          <h3>小说已按长篇连载方向规划</h3>
+          <p>每本都补充了目标字数、受众定位、主线钩子和前 6 章样章；完整分卷大纲已放在 novels 目录中。</p>
+        </aside>
+      </section>
+
+      <section class="reader-layout" id="reader">
+        <aside class="chapter-panel">
+          <p class="eyebrow">Chapters</p>
+          <h2 id="readerTitle">章节目录</h2>
+          <div class="chapter-list" id="chapterList"></div>
+        </aside>
+        <article class="reader-panel">
+          <div class="reader-meta">
+            <span id="readerCategory">玄幻</span>
+            <span id="readerAuthor">作者</span>
+          </div>
+          <h2 id="chapterTitle">第一章 星火入梦</h2>
+          <div class="reader-content" id="chapterContent"></div>
+          <div class="reader-controls">
+            <button class="ghost-button" id="prevChapter" type="button">上一章</button>
+            <button class="primary-button" id="nextChapter" type="button">下一章</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>墨卷小说</span>
+      <span>简易小说站模板</span>
+    </footer>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
